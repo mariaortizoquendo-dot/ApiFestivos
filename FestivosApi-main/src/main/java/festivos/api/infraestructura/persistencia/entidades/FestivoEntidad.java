@@ -26,7 +26,7 @@ public class FestivoEntidad {
 
     @ManyToOne
     @JoinColumn(name = "idpais", referencedColumnName = "id")
-    private paisEntidades pais;
+    private PaisEntidad pais;
 
     @Column(name = "nombre", length = 100, nullable = false)
     private String nombre;
@@ -42,15 +42,14 @@ public class FestivoEntidad {
 
     @ManyToOne
     @JoinColumn(name = "idtipo", referencedColumnName = "id")
-    private tipoEntidades tipo;
+    private TipoFestivoEntidad tipo;
 
     // Constructor vacío (requerido por JPA)
     public FestivoEntidad() {
     }
 
     // Constructor completo
-    public FestivoEntidad(int id, paisEntidades pais, String nombre, int dia, int mes, int diasPascua,
-         tipoEntidades tipo) {
+    public FestivoEntidad(int id, PaisEntidad pais, String nombre, int dia, int mes, int diasPascua, TipoFestivoEntidad tipo) {
         this.id = id;
         this.pais = pais;
         this.nombre = nombre;
@@ -69,11 +68,11 @@ public class FestivoEntidad {
         this.id = id;
     }
 
-    public paisEntidades getPais() {
+    public PaisEntidad getPais() {
         return pais;
     }
 
-    public void setPais(paisEntidades pais) {
+    public void setPais(PaisEntidad pais) {
         this.pais = pais;
     }
 
@@ -109,11 +108,11 @@ public class FestivoEntidad {
         this.diasPascua = diasPascua;
     }
 
-    public tipoEntidades getTipo() {
+    public TipoFestivoEntidad getTipo() {
         return tipo;
     }
 
-    public void setTipo(tipoEntidades tipo) {
+    public void setTipo(TipoFestivoEntidad tipo) {
         this.tipo = tipo;
     }
 }
