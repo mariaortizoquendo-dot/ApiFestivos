@@ -4,23 +4,23 @@ import java.time.LocalDate;
 
 public class FestivoDTO {
 
-    private String festivo;
+    private String nombre;
     private LocalDate fecha;
 
     public FestivoDTO() {
     }
 
-    public FestivoDTO(String festivo, LocalDate fecha) {
-        this.festivo = festivo;
+    public FestivoDTO(String nombre, LocalDate fecha) {
+        this.nombre = nombre;
         this.fecha = fecha;
     }
 
-    public String getFestivo() {
-        return festivo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFestivo(String festivo) {
-        this.festivo = festivo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public LocalDate getFecha() {
